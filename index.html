@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alex Vance | Senior Full-Stack Engineer & UI/UX Specialist</title>
+  <meta name="description" content="Portfolio of Alex Vance - Senior Full-Stack Developer specializing in modern web applications, cloud architecture, and intuitive UI/UX design.">
+  <meta name="keywords" content="Full-Stack Developer, Web Developer, Portfolio, React, Node.js, JavaScript, UI/UX Design, Software Engineer">
+  <meta name="author" content="Alex Vance">
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:title" content="Alex Vance | Full-Stack Engineer Portfolio">
+  <meta property="og:description" content="Crafting high-performance web applications with modern aesthetics and seamless user experiences.">
+  <meta property="og:type" content="website">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Background Interactive Canvas -->
+  <canvas id="particleCanvas"></canvas>
+
+  <!-- Navigation Bar -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo" id="navLogo">
+        <span class="logo-badge">&lt;/&gt;</span>
+        <span class="logo-text">Alex<span class="accent-text">Vance</span></span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#about" class="nav-item">About</a>
+        <a href="#skills" class="nav-item">Skills</a>
+        <a href="#projects" class="nav-item">Projects</a>
+        <a href="#experience" class="nav-item">Experience</a>
+        <a href="#testimonials" class="nav-item">Testimonials</a>
+        <a href="#contact" class="nav-item">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="themeToggle" class="theme-toggle-btn" aria-label="Toggle Theme">
+          <i class="fa-solid fa-moon icon-dark"></i>
+          <i class="fa-solid fa-sun icon-light"></i>
+        </button>
+
+        <a href="#contact" class="btn btn-primary btn-sm nav-cta">
+          <span>Hire Me</span>
+          <i class="fa-solid fa-paper-plane"></i>
+        </a>
+
+        <button id="mobileMenuBtn" class="mobile-menu-btn" aria-label="Open Navigation Menu" aria-expanded="false">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+      <div class="hero-container">
+        <div class="hero-content">
+          <div class="availability-badge">
+            <span class="pulsing-dot"></span>
+            <span>Available for New Projects</span>
+          </div>
+
+          <h1 class="hero-title">
+            Hi, I'm <span class="gradient-text">Alex Vance</span><br>
+            <span class="typewriter-container">
+              I build <span class="typewriter-text" id="typewriter"></span><span class="typewriter-cursor">|</span>
+            </span>
+          </h1>
+
+          <p class="hero-description">
+            Full-Stack Software Engineer with 5+ years of experience designing scalable digital products, cloud architecture, and pixel-perfect interactive web applications.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">
+              <span>View Projects</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+              <span>Get in Touch</span>
+              <i class="fa-regular fa-envelope"></i>
+            </a>
+            <a href="assets/images/avatar.png" download class="btn btn-outline" id="downloadCvBtn">
+              <i class="fa-solid fa-download"></i>
+              <span>Resume</span>
+            </a>
+          </div>
+
+          <div class="hero-socials">
+            <span class="socials-label">Connect with me:</span>
+            <div class="social-links">
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub">
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Twitter">
+                <i class="fa-brands fa-x-twitter"></i>
+              </a>
+              <a href="https://dribbble.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Dribbble">
+                <i class="fa-brands fa-dribbble"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="profile-card-wrapper">
+            <div class="glow-backdrop"></div>
+            <div class="profile-card">
+              <img src="assets/images/avatar.png" alt="Alex Vance Developer Portrait" class="avatar-img">
+              <div class="card-float-badge float-badge-1">
+                <i class="fa-solid fa-code"></i>
+                <div>
+                  <strong>Full-Stack</strong>
+                  <span>React & Node.js</span>
+                </div>
+              </div>
+              <div class="card-float-badge float-badge-2">
+                <i class="fa-solid fa-bolt"></i>
+                <div>
+                  <strong>Fast Performance</strong>
+                  <span>100 Lighthouse</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="section about-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">About Me</span>
+          <h2 class="section-title">Architecting Ideas into <span class="gradient-text">Seamless Reality</span></h2>
+          <p class="section-subtitle">Dedicated developer with a passion for clean code, human-centered design, and high-performance software systems.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-text-card glass-card">
+            <h3>My Journey</h3>
+            <p>
+              I specialize in bridging the gap between elegant frontend interfaces and robust backend microservices. Over the past 5 years, I've engineered solutions ranging from AI analytics platforms to high-scale e-commerce architectures.
+            </p>
+            <p>
+              My philosophy centers around clean maintainable code, accessible design systems (WCAG 2.1), and rapid continuous deployment pipelines.
+            </p>
+
+            <div class="about-highlights">
+              <div class="highlight-item">
+                <i class="fa-solid fa-circle-check"></i>
+                <span>Clean & Maintainable Architecture</span>
+              </div>
+              <div class="highlight-item">
+                <i class="fa-solid fa-circle-check"></i>
+                <span>Responsive & Mobile-First Philosophy</span>
+              </div>
+              <div class="highlight-item">
+                <i class="fa-solid fa-circle-check"></i>
+                <span>Agile & Collaborative Workflow</span>
+              </div>
+              <div class="highlight-item">
+                <i class="fa-solid fa-circle-check"></i>
+                <span>Performance & SEO Optimization</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-stats-grid">
+            <div class="stat-card glass-card">
+              <div class="stat-icon"><i class="fa-solid fa-rocket"></i></div>
+              <div class="stat-number" data-target="35">0</div>
+              <div class="stat-label">Projects Completed</div>
+            </div>
+            <div class="stat-card glass-card">
+              <div class="stat-icon"><i class="fa-solid fa-face-smile"></i></div>
+              <div class="stat-number" data-target="99">%</div>
+              <div class="stat-label">Client Satisfaction</div>
+            </div>
+            <div class="stat-card glass-card">
+              <div class="stat-icon"><i class="fa-solid fa-briefcase"></i></div>
+              <div class="stat-number" data-target="5">+</div>
+              <div class="stat-label">Years Experience</div>
+            </div>
+            <div class="stat-card glass-card">
+              <div class="stat-icon"><i class="fa-solid fa-award"></i></div>
+              <div class="stat-number" data-target="12">0</div>
+              <div class="stat-label">Industry Awards</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills & Expertise Section -->
+    <section id="skills" class="section skills-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Tech Stack</span>
+          <h2 class="section-title">Skills & <span class="gradient-text">Core Competencies</span></h2>
+          <p class="section-subtitle">Constantly expanding toolkit designed for modern web engineering standards.</p>
+        </div>
+
+        <div class="skills-filter">
+          <button class="skill-tab active" data-category="all">All Skills</button>
+          <button class="skill-tab" data-category="frontend">Frontend</button>
+          <button class="skill-tab" data-category="backend">Backend & DB</button>
+          <button class="skill-tab" data-category="tools">DevOps & Tools</button>
+        </div>
+
+        <div class="skills-grid" id="skillsGrid">
+          <!-- Frontend Skills -->
+          <div class="skill-card glass-card" data-category="frontend">
+            <div class="skill-header">
+              <div class="skill-icon"><i class="fa-brands fa-react"></i></div>
+              <div class="skill-info">
+                <h4>React.js & Next.js</h4>
+                <span class="skill-level">Expert</span>
+              </div>
+              <span class="skill-percent">95%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-progress" style="width: 95%;"></div></div>
+          </div>
+
+          <div class="skill-card glass-card" data-category="frontend">
+            <div class="skill-header">
+              <div class="skill-icon"><i class="fa-brands fa-js"></i></div>
+              <div class="skill-info">
+                <h4>JavaScript / TypeScript</h4>
+                <span class="skill-level">Expert</span>
+              </div>
+              <span class="skill-percent">92%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-progress" style="width: 92%;"></div></div>
+          </div>
+
+          <div class="skill-card glass-card" data-category="frontend">
+            <div class="skill-header">
+              <div class="skill-icon"><i class="fa-brands fa-html5"></i></div>
+              <div class="skill-info">
+                <h4>HTML5 / CSS3 / SASS</h4>
+                <span class="skill-level">Master</span>
+              </div>
+              <span class="skill-percent">98%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-progress" style="width: 98%;"></div></div>
+          </div>
+
+          <!-- Backend Skills -->
+          <div class="skill-card glass-card" data-category="backend">
+            <div class="skill-header">
+              <div class="skill-icon"><i class="fa-brands fa-node-js"></i></div>
+              <div class="skill-info">
+                <h4>Node.js & Express</h4>
+                <span class="skill-level">Advanced</span>
+              </div>
+              <span class="skill-percent">88%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-progress" style="width: 88%;"></div></div>
+          </div>
+
+          <div class="skill-card glass-card" data-category="backend">
+            <div class="skill-header">
+              <div class="skill-icon"><i class="fa-solid fa-database"></i></div>
+              <div class="skill-info">
+                <h4>PostgreSQL & MongoDB</h4>
+                <span class="skill-level">Advanced</span>
+              </div>
+              <span class="skill-percent">85%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-progress" style="width: 85%;"></div></div>
+          </div>
+
+          <div class="skill-card glass-card" data-category="backend">
+            <div class="skill-header">
+              <div class="skill-icon"><i class="fa-brands fa-python"></i></div>
+              <div class="skill-info">
+                <h4>Python & FastApi</h4>
+                <span class="skill-level">Intermediate</span>
+              </div>
+              <span class="skill-percent">80%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-progress" style="width: 80%;"></div></div>
+          </div>
+
+          <!-- Tools & DevOps -->
+          <div class="skill-card glass-card" data-category="tools">
+            <div class="skill-header">
+              <div class="skill-icon"><i class="fa-brands fa-docker"></i></div>
+              <div class="skill-info">
+                <h4>Docker & Containers</h4>
+                <span class="skill-level">Intermediate</span>
+              </div>
+              <span class="skill-percent">82%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-progress" style="width: 82%;"></div></div>
+          </div>
+
+          <div class="skill-card glass-card" data-category="tools">
+            <div class="skill-header">
+              <div class="skill-icon"><i class="fa-brands fa-git-alt"></i></div>
+              <div class="skill-info">
+                <h4>Git & GitHub CI/CD</h4>
+                <span class="skill-level">Expert</span>
+              </div>
+              <span class="skill-percent">94%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-progress" style="width: 94%;"></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Projects Section -->
+    <section id="projects" class="section projects-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Portfolio</span>
+          <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+          <p class="section-subtitle">A showcase of recent web applications built with emphasis on user experience, speed, and clean design.</p>
+        </div>
+
+        <div class="project-filters">
+          <button class="project-filter-btn active" data-filter="all">All Projects</button>
+          <button class="project-filter-btn" data-filter="web">Web Apps</button>
+          <button class="project-filter-btn" data-filter="ai">AI & Cloud</button>
+          <button class="project-filter-btn" data-filter="fintech">FinTech</button>
+        </div>
+
+        <div class="projects-grid" id="projectsGrid">
+          <!-- Project 1 -->
+          <article class="project-card glass-card" data-category="web" data-id="1">
+            <div class="project-image-wrapper">
+              <img src="assets/images/project_ecommerce.png" alt="Nexus E-Commerce SaaS" class="project-img">
+              <div class="project-overlay">
+                <button class="btn btn-icon view-details-btn" data-id="1" aria-label="View Project Details">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </button>
+              </div>
+              <span class="project-badge">E-Commerce SaaS</span>
+            </div>
+            <div class="project-content">
+              <div class="project-tags">
+                <span>React</span>
+                <span>Node.js</span>
+                <span>Stripe API</span>
+                <span>Tailwind</span>
+              </div>
+              <h3 class="project-title">Nexus SaaS E-Commerce Platform</h3>
+              <p class="project-desc">Full-stack multi-vendor shopping engine featuring real-time inventory management, payment gateway integration, and customer analytics.</p>
+              <div class="project-footer">
+                <button class="project-link-btn view-details-btn" data-id="1">
+                  <span>Explore Project</span>
+                  <i class="fa-solid fa-chevron-right"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card glass-card" data-category="ai" data-id="2">
+            <div class="project-image-wrapper">
+              <img src="assets/images/project_aianalytics.png" alt="NeuralPulse AI Analytics" class="project-img">
+              <div class="project-overlay">
+                <button class="btn btn-icon view-details-btn" data-id="2" aria-label="View Project Details">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </button>
+              </div>
+              <span class="project-badge">AI Platform</span>
+            </div>
+            <div class="project-content">
+              <div class="project-tags">
+                <span>TypeScript</span>
+                <span>Next.js</span>
+                <span>Python API</span>
+                <span>D3.js</span>
+              </div>
+              <h3 class="project-title">NeuralPulse AI Insights Platform</h3>
+              <p class="project-desc">AI-powered predictive data visualization tool offering real-time telemetry analytics, chart generation, and predictive anomaly detection.</p>
+              <div class="project-footer">
+                <button class="project-link-btn view-details-btn" data-id="2">
+                  <span>Explore Project</span>
+                  <i class="fa-solid fa-chevron-right"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project-card glass-card" data-category="web" data-id="3">
+            <div class="project-image-wrapper">
+              <img src="assets/images/project_healthtech.png" alt="CarePulse Telehealth Portal" class="project-img">
+              <div class="project-overlay">
+                <button class="btn btn-icon view-details-btn" data-id="3" aria-label="View Project Details">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </button>
+              </div>
+              <span class="project-badge">HealthTech</span>
+            </div>
+            <div class="project-content">
+              <div class="project-tags">
+                <span>Vue.js</span>
+                <span>Express</span>
+                <span>WebRTC</span>
+                <span>PostgreSQL</span>
+              </div>
+              <h3 class="project-title">CarePulse Telemedicine Portal</h3>
+              <p class="project-desc">HIPAA-compliant web platform enabling online doctor consultations, video appointments, instant prescription dispatch, and vital tracking.</p>
+              <div class="project-footer">
+                <button class="project-link-btn view-details-btn" data-id="3">
+                  <span>Explore Project</span>
+                  <i class="fa-solid fa-chevron-right"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4 -->
+          <article class="project-card glass-card" data-category="fintech" data-id="4">
+            <div class="project-image-wrapper">
+              <img src="assets/images/project_fintech.png" alt="Aether Finance Web3 Dashboard" class="project-img">
+              <div class="project-overlay">
+                <button class="btn btn-icon view-details-btn" data-id="4" aria-label="View Project Details">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </button>
+              </div>
+              <span class="project-badge">FinTech & Web3</span>
+            </div>
+            <div class="project-content">
+              <div class="project-tags">
+                <span>React</span>
+                <span>Ethers.js</span>
+                <span>Chart.js</span>
+                <span>CSS Modules</span>
+              </div>
+              <h3 class="project-title">Aether Web3 Crypto Wallet</h3>
+              <p class="project-desc">High-security decentralized digital asset tracker featuring multi-currency portfolio management, swap simulations, and real-time alerts.</p>
+              <div class="project-footer">
+                <button class="project-link-btn view-details-btn" data-id="4">
+                  <span>Explore Project</span>
+                  <i class="fa-solid fa-chevron-right"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience & Education Section -->
+    <section id="experience" class="section experience-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Career Trail</span>
+          <h2 class="section-title">Work Experience & <span class="gradient-text">Education</span></h2>
+          <p class="section-subtitle">A timeline of my professional roles and academic achievements.</p>
+        </div>
+
+        <div class="timeline-wrapper">
+          <div class="timeline">
+
+            <!-- Item 1 -->
+            <div class="timeline-item">
+              <div class="timeline-dot"><i class="fa-solid fa-briefcase"></i></div>
+              <div class="timeline-content glass-card">
+                <span class="timeline-date">2023 - Present</span>
+                <h3 class="timeline-title">Lead Full-Stack Engineer</h3>
+                <h4 class="timeline-subtitle">Vortex Cloud Systems</h4>
+                <p>Heading frontend design architecture and cloud microservices. Reduced application bundle sizes by 40% and improved server responses by 250ms across key platforms.</p>
+              </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="timeline-item">
+              <div class="timeline-dot"><i class="fa-solid fa-code"></i></div>
+              <div class="timeline-content glass-card">
+                <span class="timeline-date">2021 - 2023</span>
+                <h3 class="timeline-title">Senior Web Developer</h3>
+                <h4 class="timeline-subtitle">Apex Digital Studio</h4>
+                <p>Designed and built bespoke responsive web apps for over 20 global clients using React, Node.js, and SASS. Implemented accessible UI design systems.</p>
+              </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="timeline-item">
+              <div class="timeline-dot"><i class="fa-solid fa-laptop-code"></i></div>
+              <div class="timeline-content glass-card">
+                <span class="timeline-date">2019 - 2021</span>
+                <h3 class="timeline-title">Frontend Developer</h3>
+                <h4 class="timeline-subtitle">Starlight Interactive</h4>
+                <p>Developed interactive landing pages, web widgets, and web components. Collaborated closely with UI/UX designers to translate Figma mockups into scalable HTML/CSS.</p>
+              </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="timeline-item">
+              <div class="timeline-dot"><i class="fa-solid fa-graduation-cap"></i></div>
+              <div class="timeline-content glass-card">
+                <span class="timeline-date">2015 - 2019</span>
+                <h3 class="timeline-title">B.S. in Computer Science</h3>
+                <h4 class="timeline-subtitle">State University of Technology</h4>
+                <p>Graduated with Honors. Specialized in Software Engineering, Web Technologies, and Database Systems. Lead Developer for the University Innovation Lab.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="section testimonials-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Endorsements</span>
+          <h2 class="section-title">What Clients & Peers <span class="gradient-text">Say</span></h2>
+          <p class="section-subtitle">Real feedback from leaders and managers I've collaborated with.</p>
+        </div>
+
+        <div class="testimonial-slider-wrapper">
+          <div class="testimonial-slider" id="testimonialSlider">
+            
+            <div class="testimonial-card glass-card active">
+              <div class="quote-icon"><i class="fa-solid fa-quote-right"></i></div>
+              <p class="testimonial-text">
+                "Alex is an exceptionally talented engineer. He delivered our SaaS platform 2 weeks ahead of schedule with remarkable code quality and a polished aesthetic that blew our investors away."
+              </p>
+              <div class="testimonial-author">
+                <div class="author-avatar"><i class="fa-solid fa-user-astronaut"></i></div>
+                <div>
+                  <h4 class="author-name">Sarah Jenkins</h4>
+                  <span class="author-role">CTO, Nexus Technologies</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-card glass-card">
+              <div class="quote-icon"><i class="fa-solid fa-quote-right"></i></div>
+              <p class="testimonial-text">
+                "Working with Alex was seamless. His keen eye for UI/UX micro-interactions combined with rock-solid backend logic elevated our user retention by 35% in just 3 months."
+              </p>
+              <div class="testimonial-author">
+                <div class="author-avatar"><i class="fa-solid fa-user-ninja"></i></div>
+                <div>
+                  <h4 class="author-name">Marcus Vance</h4>
+                  <span class="author-role">Product Director, NeuralPulse</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-card glass-card">
+              <div class="quote-icon"><i class="fa-solid fa-quote-right"></i></div>
+              <p class="testimonial-text">
+                "Rarely do you find a full-stack developer who understands high performance, responsive CSS, and modern API design equally well. Alex is a true 10x team member."
+              </p>
+              <div class="testimonial-author">
+                <div class="author-avatar"><i class="fa-solid fa-user-tie"></i></div>
+                <div>
+                  <h4 class="author-name">David Thorne</h4>
+                  <span class="author-role">Founder, Apex Digital</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="slider-controls">
+            <button class="slider-prev-btn" id="sliderPrev" aria-label="Previous Testimonial">
+              <i class="fa-solid fa-arrow-left"></i>
+            </button>
+            <div class="slider-dots" id="sliderDots">
+              <span class="dot active" data-index="0"></span>
+              <span class="dot" data-index="1"></span>
+              <span class="dot" data-index="2"></span>
+            </div>
+            <button class="slider-next-btn" id="sliderNext" aria-label="Next Testimonial">
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Get In Touch</span>
+          <h2 class="section-title">Let's Build Something <span class="gradient-text">Extraordinary</span></h2>
+          <p class="section-subtitle">Have a project in mind or want to collaborate? Send me a message and I'll respond within 24 hours.</p>
+        </div>
+
+        <div class="contact-wrapper">
+          <div class="contact-info-card glass-card">
+            <h3>Contact Information</h3>
+            <p>Feel free to reach out directly via email, phone, or connect through social media.</p>
+
+            <div class="contact-details">
+              <div class="contact-item">
+                <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+                <div>
+                  <span class="contact-label">Email Me</span>
+                  <a href="mailto:alex.vance.dev@example.com" class="contact-val">alex.vance.dev@example.com</a>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+                <div>
+                  <span class="contact-label">Location</span>
+                  <span class="contact-val">San Francisco, CA & Remote</span>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon"><i class="fa-solid fa-calendar-check"></i></div>
+                <div>
+                  <span class="contact-label">Work Availability</span>
+                  <span class="contact-val">Full-Time & Contract Projects</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-socials-box">
+              <span>Follow My Work:</span>
+              <div class="social-links">
+                <a href="https://github.com" target="_blank" class="social-icon" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://linkedin.com" target="_blank" class="social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://twitter.com" target="_blank" class="social-icon" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form-card glass-card">
+            <form id="contactForm" novalidate>
+              <div class="form-group-row">
+                <div class="form-group">
+                  <label for="name">Your Name <span class="required">*</span></label>
+                  <div class="input-wrapper">
+                    <i class="fa-solid fa-user input-icon"></i>
+                    <input type="text" id="name" name="name" placeholder="John Doe" required>
+                  </div>
+                  <span class="error-msg" id="nameError">Please enter your name</span>
+                </div>
+
+                <div class="form-group">
+                  <label for="email">Your Email <span class="required">*</span></label>
+                  <div class="input-wrapper">
+                    <i class="fa-solid fa-envelope input-icon"></i>
+                    <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                  </div>
+                  <span class="error-msg" id="emailError">Please enter a valid email address</span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="subject">Subject <span class="required">*</span></label>
+                <div class="input-wrapper">
+                  <i class="fa-solid fa-tag input-icon"></i>
+                  <input type="text" id="subject" name="subject" placeholder="Project Inquiry / Hiring" required>
+                </div>
+                <span class="error-msg" id="subjectError">Please enter a subject</span>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Your Message <span class="required">*</span></label>
+                <div class="input-wrapper">
+                  <i class="fa-solid fa-comment-dots input-icon textarea-icon"></i>
+                  <textarea id="message" name="message" rows="5" placeholder="Tell me about your project goals, timelines, or questions..." required></textarea>
+                </div>
+                <span class="error-msg" id="messageError">Please enter your message (at least 10 characters)</span>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block" id="submitBtn">
+                <span>Send Message</span>
+                <i class="fa-solid fa-paper-plane"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-left">
+        <a href="#hero" class="nav-logo">
+          <span class="logo-badge">&lt;/&gt;</span>
+          <span class="logo-text">Alex<span class="accent-text">Vance</span></span>
+        </a>
+        <p>© 2026 Alex Vance. Designed & Built with Precision.</p>
+      </div>
+
+      <div class="footer-right">
+        <a href="#hero" class="back-to-top" id="backToTopBtn" aria-label="Back to top">
+          <i class="fa-solid fa-arrow-up"></i>
+          <span>Back to Top</span>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Project Details Modal -->
+  <div class="modal-overlay" id="projectModal" aria-hidden="true">
+    <div class="modal-content glass-card">
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="modal-body" id="modalBody">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Main JavaScript File -->
+  <script src="js/main.js"></script>
+</body>
+</html>
